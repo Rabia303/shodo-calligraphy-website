@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>shodo</title>
+</head>
+<style>
+  body,p{
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-family: "Times New Roman", Times, serif;
+  background-color: #d5c4c4;
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-style: italic;
+  }
+ footer{
+font-family: 'Times New Roman', Times, serif;
+font-size:18px;
+width: 100%;
+
+ }
+  section {
+    /* font-family: "WorkSans Light", sans-serif !important; */
+    display: flex;
+    flex-direction: column;
+    line-height: 1.7;
+    max-width: 52.1rem !important;
+    font-size: 1.6rem;
+    color: #424242;
+    font-weight: 300 !important;
+    line-height: 3rem !important;
+    margin-bottom: 2rem !important;
+    margin: 0 auto;
+    text-align: justify !important;
+    word-wrap: break-word;
+
+  }
+
+  .a {
+    /* max-width: 900px;
+  margin: auto; */
+    max-width: 100%;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
+    padding: 0.75rem;
+    box-shadow: 3px 4px 12px #dedede;
+  }
+
+  .b {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 0.75rem;
+    box-shadow: 3px 4px 12px #dedede;
+    box-sizing: border-box;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  }
+h1{
+  
+  font-family: Garamond, serif,cursive;
+  font-size:78px ;
+}
+  h3,h2 {
+    /* font-family:Helvetica (sans-serif); */
+    font-family: 'Brush Script MT', cursive;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bolder;
+
+  }
+  h5{
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+  }
+  #X{
+    width:100%;
+  }
+
+</style>
+
+<body>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            
+            --text-color: #0a0b0f;
+            --hover-color: #262d0a;
+            --accent-color: #cc0404;
+            --underline-thickness: 3px;
+         
+        }
+
+        body {
+            margin: 0; /* Remove default body margin */
+          
+        }
+
+        .container {
+            width: 100%; /* Make the container full width */
+            padding: 20px; /* Add padding for spacing */
+            box-sizing: border-box; /* Include padding in container width */
+          
+        }
+
+        nav {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            text-transform: uppercase;
+            font-size: larger;
+            font-weight: lighter;
+            font-style: italic;
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+
+        nav a {
+            color: var(--text-color);
+            cursor: pointer;
+            overflow: hidden;
+            transition: 0.3s;
+            position: relative;
+            text-decoration: none;
+            padding: 0 0.5em 0.25em;
+        }
+
+        nav a::before {
+            content: "";
+            scale: 0 1;
+            position: absolute;
+            background: var(--accent-color);
+            transition: 0.3s, translate 0s 0.3s;
+            inset: calc(100% - var(--underline-thickness)) 0 0 0;
+        }
+
+        nav a:hover {
+            color: var(--hover-color);
+        }
+
+        nav a:hover::before {
+            translate: 0;
+            transition: 0.3s;
+        }
+
+        /* Add animation for underline transition */
+        nav:hover a::before {
+            scale: 1;
+        }
+
+        nav:hover a:has(~ a:hover)::before {
+            translate: 100% 0;
+            transition: 0.2s 0.2s, scale 0s 0.4s;
+        }
+
+        nav:hover a:hover ~ a::before {
+            translate: -100% 0;
+            transition: 0.2s 0.2s, scale 0s 0.4s;
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="container">
+    
+        <nav style="text-align: center;justify-content: center;">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contact</a>
+            <a href="types.html">Types of Calligraphy</a>
+        </nav>
+
+    </div>
+
+  <div class="a">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="images/c.jpg " alt="First slide">
+        </div>
+      </div>
+    </div>
+    <section>
+      <center><h2>ORIGIN OF CALLIGRAPHY</h2></center>
+      <P>Calligraphy is an ancient art form that has its roots in the Middle East and East Asia. The word "calligraphy"
+        comes from the Greek words "kallos" meaning "beauty" and "graphein" meaning "to write."
+
+        Calligraphy developed as a way to beautify written language and was used to produce important documents such as
+        religious texts, royal decrees, and official correspondence. As the art form evolved, different styles of
+        calligraphy emerged, each with its own unique characteristics, including the development of different scripts
+        such as Arabic, Chinese, and Japanese calligraphy.
+
+        Calligraphy has been an important art form for centuries and continues to be appreciated for its beauty and
+        elegance. Today, calligraphy is still used for special occasion such as weddings, invitations, and
+        announcements, as well as in graphic design and typography.</P>
+    </section>
+        <div id="X">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="damon-lam-oKpGy7_WsjE-unsplash (1).jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="shoichiro-kono-UjMtt61cwvc-unsplash.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="jean-beller--bSVqdBuyzQ-unsplash.jpg" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <section>
+      <center><h1>DIFFERENT TYPES OF CALLIGRAPHY</h1></center>
+
+
+      <h3>Western calligraphy</h3>
+      <p>
+      <h5>Definition:</h5> Western calligraphy is a form of handwriting that developed in Europe during the medieval
+      period.
+      It is characterized by the use of thin and thick strokes in a highly decorative and ornate style, and was used for producing illuminated manuscripts and official documents.
+
+      <h5>History:</h5> Western calligraphy has a rich history, dating back to the medieval period when scribes and
+      monks created beautiful illuminated manuscripts. The tradition of Western calligraphy continued to evolve over the centuries and
+      has been influenced by various cultural and artistic movements, including the Renaissance and the Arts and Crafts movement.
+
+      <h5>Styles:</h5> Western calligraphy encompasses a variety of styles, including Gothic, Italic, and Copperplate
+      script. Each style has its own unique characteristics, such as the use of serifs or flourishing, and is suited to different types of projects, such as formal documents or decorative pieces.
+
+      <h5>Tools:</h5> Traditional Western calligraphy is done with a nib and ink, but calligraphers today also use a
+      variety of other materials, such as brush pens and markers. The choice of tool often depends on the style of
+      calligraphy being practiced and the desired outcome.
+
+      <h5>Applications:</h5>Western calligraphy is used for a wide range of projects, including wedding invitations,
+      greeting cards, certificates, and posters. Calligraphers also create custom pieces for individuals, such as monograms, quotes, and poems.
+
+      <h5> Community:</h5> There is a thriving community of Western calligraphers who share their work, offer classes
+      and workshops,and provide resources and inspiration for others interested in the art form.</p>
+      <div clas="b">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="pexels-miguel-á-padriñán-114107.jpg" alt="First slide">
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+      <h3>Contemprory calligraphy</h3>
+      <p>
+      <h5>Definition:</h5> Contemporary calligraphy is a modern interpretation of the traditional art of calligraphy. It
+      combines traditional techniques with new styles, materials, and tools to create a fresh and dynamic form of calligraphy.
+
+      <h5>Evolution:</h5> Contemporary calligraphy has evolved from traditional forms of calligraphy to encompass a
+      wider range of styles and techniques. Calligraphers today experiment with new tools, materials, and technologies to create unique
+      and innovative pieces of art.
+
+      <h5> Popular styles:</h5> Some popular styles of contemporary calligraphy include brush calligraphy, digital
+      calligraphy, and modern pointed pen calligraphy. Each style has its own distinct characteristics and techniques, making it possible for calligraphers to find their own personal style.
+
+      <h5>Materials:</h5> Contemporary calligraphers use a wide range of materials, including traditional tools such as dip ,pens and ink, as well as modern tools like brush pens, markers, and even digital tablets. The choice of material is often
+      dependent on the style of calligraphy being practiced.
+
+      <h5>Applications:</h5> Contemporary calligraphy can be applied to a variety of mediums and projects, including
+      wedding invitations, greeting cards, logos, and posters. Many calligraphers also create custom pieces for individuals,such as personalized poems, quotes, or names.
+
+      <h5>Community:</h5> There is a growing community of contemporary calligraphers who share their work, offer classes
+      and workshops, and provide resources and inspiration for others interested in the art form.</p>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="rachel-mcdermott-fZ2DnCBiLE8-unsplash.jpg" alt="First slide">
+          </div>
+        </div>
+      </div>
+      
+      <h3>Faux calligraphy</h3>
+      <p>
+        <h5>Definition:</h5> Faux calligraphy is a style of handwriting that simulates the look of traditional calligraphy but
+        does
+        not require the use of specialized tools or techniques. It is also known as "fake calligraphy" or "fun
+        calligraphy".
+
+      <h5>Techniques:</h5> Faux calligraphy is created using everyday writing tools, such as pens, pencils, or markers, and is
+        based on the principle of creating thicker and thinner lines to mimic the look of traditional calligraphy. There
+        is
+        no need for specialized training or the use of dip pens and ink.
+
+      <h5> Popularity:</h5> Faux calligraphy has become increasingly popular in recent years due to its ease of use and
+        versatility.
+        It is a great way for beginners to get started with calligraphy, as well as for experienced calligraphers to try
+        out
+        new styles and techniques.
+
+      <h5>Applications:</h5> Faux calligraphy can be applied to a wide range of projects, including wedding invitations,
+        greeting
+        cards, posters, and home decor. It is also a popular choice for hand lettering and adding personal touches to
+        everyday items such as journal pages and notebook covers.
+
+      <h5>Resources:</h5> There are many resources available for those interested in learning faux calligraphy, including
+        online
+        tutorials, books, and workshops. Practice sheets and alphabet guides can also be found online, making it easy to
+        get
+        started with this style of calligraphy.
+
+      <h5> Community:</h5> There is a growing community of faux calligraphers who share their work, offer classes and workshops,
+        and
+        provide resources and inspiration for others interested in the art form.
+
+        This content should provide a good overview of Faux calligraphy and give your website visitors an idea of what
+        to
+        expect from this form of calligraphy.</p>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="pexels-cottonbro-studio-3826682.jpg" alt="First slide">
+            </div>
+          </div>
+        </div>
+      <h2>Brush pen</h2>
+      <p>
+      <h5>Definition:</h5> Brush Pen Calligraphy is a form of calligraphy that uses brush pens to create letters and designs.
+        Brush pens have flexible bristles or fibers that allow for a range of stroke widths and styles, making them a
+        popular choice for calligraphers and lettering artists.
+
+      <h5>History:</h5> Brush Pen Calligraphy has roots in traditional calligraphy and Asian calligraphy styles, such as
+        Chinese
+        and Japanese calligraphy, which have long used brushes to create calligraphic works. The use of brush pens in
+        calligraphy has become more popular in recent years due to their ease of use and versatility.
+
+      <h5> Styles:</h5> Brush Pen Calligraphy can be used to create a range of styles, from modern and minimalist to traditional
+        and
+        ornate. The style used often depends on the specific brush pen being used and the skill of the calligrapher.
+
+      <h5>Tools:</h5> Brush pens come in a variety of sizes, shapes, and materials, including synthetic fibers and natural
+        hairs.
+        Different brush pens produce different stroke widths and styles, and it is important for calligraphers to choose
+        the
+        right brush pen for the desired style and project.
+
+      <h5>Applications:</h5> Brush Pen Calligraphy can be used for a wide range of projects, including wedding invitations,
+        greeting cards, posters, and home decor. It is also a popular choice for hand lettering and adding personal
+        touches
+        to everyday items such as journal pages and notebook covers.
+
+      <h5>Resources:</h5> There are many resources available for those interested in learning Brush Pen Calligraphy, including
+        online tutorials, books, and workshops. Practice sheets and alphabet guides can also be found online, making it
+        easy
+        to get started with this style of calligraphy.
+
+      <h5>Community:</h5> There is a thriving community of brush pen calligraphers who share their work, offer classes and
+        workshops, and provide resources and inspiration for others interested in the art form.
+      </p>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="pexels-feng-zou-5788529.jpg" alt="First slide">
+          </div>
+        </div>
+      </div>
+
+      <h2>Eastern Calligraphy</h2>
+      <p>
+      <h5>Definition:</h5> Eastern Calligraphy refers to the calligraphic traditions of the East, including Chinese, Japanese,
+        Korean, and Arabic calligraphy. These calligraphic styles have a rich history and cultural significance, and are
+        known for their artistic beauty and elegance.
+
+      <h5>History:</h5> Eastern calligraphy has a long history, with roots dating back thousands of years. In China, for
+        example,
+        calligraphy was considered one of the Four Arts of the scholars, and was valued not only for its aesthetic
+        qualities, but also for its spiritual and moral dimensions.
+
+      <h5>Styles:</h5> Eastern calligraphy encompasses a wide range of styles, each with its own unique characteristics and
+        techniques. Some of the most popular styles include Chinese brush calligraphy, Japanese brush calligraphy,
+        Arabic
+        calligraphy, and Korean calligraphy.
+
+      <h5>Tools:</h5> Eastern calligraphy is typically created using brushes, ink, and paper. The brushes used vary in size,
+        shape,
+        and material, and can be made from animal hair, such as horse or goat, or synthetic fibers. The ink used is
+        typically black or dark brown, and is made from soot or other natural materials.
+
+      <h5>Significance:</h5> Eastern calligraphy is considered a form of art, and is often used to create works of beauty and
+        elegance. It is also used to convey spiritual and moral messages, and is considered an important part of the
+        cultural heritage of many Eastern countries.
+
+      <h5>Resources:</h5> There are many resources available for those interested in learning Eastern calligraphy, including
+        online
+        tutorials, books, and workshops. There are also schools and organizations dedicated to preserving and promoting
+        the
+        art form, and providing resources and inspiration for those interested in learning more.
+
+      <h5> Community:</h5> There is a vibrant community of Eastern calligraphers who share their work, offer classes and
+        workshops,
+        and provide resources and inspiration for others interested in the art form.</p>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="marco-zuppone-zHwWnUDMizo-unsplash.jpg" alt="First slide">
+            </div>
+            
+          </div>
+        </div>
+      <h3>Arabic Calligraphy</h3>
+      <p>
+      <h5>Definition:</h5> Arabic Calligraphy is the artistic practice of writing the Arabic script in a visually pleasing and
+        harmonious way. It is a highly stylized and sophisticated form of calligraphy that has been used for centuries
+        to
+        create beautiful works of art, and is considered an important part of Islamic art and culture.
+
+      <h5>History:</h5> Arabic calligraphy has a rich history that dates back to the 7th century, when it was first used to
+        transcribe the Qur'an. Over time, the practice of Arabic calligraphy evolved into a sophisticated art form, and
+        has
+        been used to create beautiful works of art, such as illuminated manuscripts, poetry, and calligraphic
+        compositions.
+
+      <h5>Styles:</h5> Arabic calligraphy encompasses a wide range of styles, each with its own unique characteristics and
+        techniques. Some of the most popular styles include the Kufic style, the Naskh style, the Thuluth style, and the
+        Diwani style.
+
+      <h5> Tools:</h5> Arabic calligraphy is typically created using reed pens, ink, and paper. The reed pens used can vary in
+        size
+        and shape, and are made from natural materials, such as bamboo or reeds. The ink used is typically black or dark
+        brown, and is made from soot or other natural materials.
+
+      <h5>Significance:</h5> Arabic calligraphy is considered a form of art, and is often used to create works of beauty and
+        elegance. It is also considered an important part of Islamic culture, and is used to transcribe religious texts,
+        such as the Qur'an.
+      <h5> Resources:</h5> There are many resources available for those interested in learning Arabic calligraphy, including
+        online
+        tutorials, books, and workshops. There are also schools and organizations dedicated to preserving and promoting
+        the
+        art form, and providing resources and inspiration for those interested in learning more.
+
+      <h5>Community:</h5> There is a vibrant community of Arabic calligraphers who share their work, offer classes and
+        workshops,
+        and provide resources and inspiration for others interested in the art form.</p>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="images/b.jpg" alt="First slide">
+            </div>
+          </div>
+        </div>
+      <h3>pointed pen calligraphy</h3>
+      <p>Pointed pen calligraphy is a form of calligraphy that uses a thin, pointed nib to create delicate, flowing
+        lines.
+        This style of calligraphy emerged in Europe during the medieval period and was used to produce illuminated
+        manuscripts, official documents, and works of art.</p>
+
+       <p> Pointed pen calligraphy is often referred to as copperplate or Engrosser's script and is characterized by its
+        fine
+        hairlines, dramatic contrast between thick and thin strokes, and intricate details. The use of a pointed nib
+        allows
+        calligraphers to create a range of line widths by applying varying pressure, resulting in a more expressive and
+        dynamic writing style.
+      </p><p>
+        Today, pointed pen calligraphy is enjoyed by artists, calligraphers, and enthusiasts around the world. It is
+        used
+        for a variety of applications, including wedding invitations, greeting cards, and lettering for logos and
+        signage.
+      </p><p>
+        Learning pointed pen calligraphy requires practice and patience, as the delicate nature of the script demands
+        precision and control. However, many find the process of creating beautiful, handwritten letters to be both
+        meditative and rewarding. Whether for artistic expression or personal fulfillment, pointed pen calligraphy
+        continues
+        to be a fascinating and timeless art form.</p>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="samir-bouaked-MFvflDBZdyM-unsplash.jpg" alt="First slide">
+          </div>
+        </div>
+      <h2>broad edge calligraphy</h2>
+      <p>Broad edge calligraphy is a form of calligraphy that uses a broad nib to create bold, sweeping lines. Unlike
+        pointed pen calligraphy, which is characterized by its fine hairlines and delicate details, broad edge
+        calligraphy
+        is known for its dramatic contrast between thick and thin strokes and its ability to create broad areas of solid
+        color.</p>
+<p>
+        This style of calligraphy has its roots in ancient civilizations, where it was used for a variety of purposes,
+        including inscriptions, signs, and lettering on architectural monuments. In the medieval period, broad edge
+        calligraphy was used to produce illuminated manuscripts, including the famous illuminated Bibles of the time.
+      </p><p>
+        Today, broad edge calligraphy continues to be popular and is used for a variety of applications, including
+        wedding
+        invitations, posters, and signs. The versatility of broad edge calligraphy makes it a favorite among
+        calligraphers,
+        artists, and designers, as it can be used to create a range of effects, from bold and dramatic to soft and
+        delicate.
+      </p><p>
+        Learning broad edge calligraphy requires practice and patience, as the bold nature of the script demands control
+        and
+        precision. However, many find the process of creating beautiful, handwritten letters to be both challenging and
+        rewarding. Whether for artistic expression or personal fulfillment, broad edge calligraphy remains an enduring
+        and
+        captivating art form.</p>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="pexels-antoni-shkraba-4348088.jpg" alt="First slide">
+            </div>
+          </div>
+        </div>
+  </div>
+  </section>
+  <!-- <div class="container my-5"> -->
+
+    <footer class="bg-dark text-center text-lg-start text-white">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row mt-4">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">See other books</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Bestsellers</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>All books</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white"><i class="fas fa-user-edit fa-fw fa-sm me-2"></i>Our authors</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Execution of the contract</h5>
+  
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Supply</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white"><i class="fas fa-backspace fa-fw fa-sm me-2"></i>Returns</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Regulations</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Publishing house</h5>
+  
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-white">The BookStore</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">123 Street</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">05765 NY</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white"><i class="fas fa-briefcase fa-fw fa-sm me-2"></i>Send us a book</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Write to us</h5>
+  
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>Help in purchasing</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Check the order status</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>Join the newsletter</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2021 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  
+  </div>
+  <!-- End of .container -->
+</body>
+
+</html>

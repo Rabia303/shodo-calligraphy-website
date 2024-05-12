@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Gallery</title>
+</head>
+<style>
+  body,p{
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-family: "Times New Roman", Times, serif;
+  background-color: #d5c4c4;
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-style: italic;
+  }
+ footer{
+font-family: 'Times New Roman', Times, serif;
+font-size:18px;
+width: 100%;
+
+ }
+  section {
+    /* font-family: "WorkSans Light", sans-serif !important; */
+    display: flex;
+    flex-direction: column;
+    line-height: 1.7;
+    max-width: 52.1rem !important;
+    font-size: 1.6rem;
+    color: #424242;
+    font-weight: 300 !important;
+    line-height: 3rem !important;
+    margin-bottom: 2rem !important;
+    margin: 0 auto;
+    text-align: justify !important;
+    word-wrap: break-word;
+
+  }
+
+  .a {
+    /* max-width: 900px;
+  margin: auto; */
+    max-width: 100%;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
+    padding: 0.75rem;
+    box-shadow: 3px 4px 12px #dedede;
+  }
+
+  .b {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 0.75rem;
+    box-shadow: 3px 4px 12px #dedede;
+    box-sizing: border-box;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  }
+h1{
+  
+  font-family: Garamond, serif,cursive;
+  font-size:78px ;
+}
+  h3,h2 {
+    /* font-family:Helvetica (sans-serif); */
+    font-family: 'Brush Script MT', cursive;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bolder;
+
+  }
+  h5{
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+  }
+  #X{
+    width:100%;
+  }
+
+</style>
+<body>
+  
+  <style>
+    :root {
+        
+        --text-color: #0a0b0f;
+        --hover-color: #262d0a;
+        --accent-color: #cc0404;
+        --underline-thickness: 3px;
+     
+    }
+
+    body {
+        margin: 0; /* Remove default body margin */
+      
+    }
+
+    .container {
+        width: 100%; /* Make the container full width */
+        padding: 20px; /* Add padding for spacing */
+        box-sizing: border-box; /* Include padding in container width */
+      
+    }
+
+    nav {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        text-transform: uppercase;
+        font-size: larger;
+        font-weight: lighter;
+        font-style: italic;
+        font-family: 'Courier New', Courier, monospace;
+        
+    }
+
+    nav a {
+        color: var(--text-color);
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.3s;
+        position: relative;
+        text-decoration: none;
+        padding: 0 0.5em 0.25em;
+    }
+
+    nav a::before {
+        content: "";
+        scale: 0 1;
+        position: absolute;
+        background: var(--accent-color);
+        transition: 0.3s, translate 0s 0.3s;
+        inset: calc(100% - var(--underline-thickness)) 0 0 0;
+    }
+
+    nav a:hover {
+        color: var(--hover-color);
+    }
+
+    nav a:hover::before {
+        translate: 0;
+        transition: 0.3s;
+    }
+
+    /* Add animation for underline transition */
+    nav:hover a::before {
+        scale: 1;
+    }
+
+    nav:hover a:has(~ a:hover)::before {
+        translate: 100% 0;
+        transition: 0.2s 0.2s, scale 0s 0.4s;
+    }
+
+    nav:hover a:hover ~ a::before {
+        translate: -100% 0;
+        transition: 0.2s 0.2s, scale 0s 0.4s;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+  <nav style="text-align: center;justify-content: center;">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="types.html">Types of Calligraphy</a>
+        <a href="contactus.html">Contact</a>
+    </nav>
+</div>
+  <br>
+  <div class="portfolio-gallery">
+    <div class="filter-buttons">
+      <button class="filter-button active" data-filter="all">All</button>
+      <button class="filter-button" data-filter="design">Modern</button>
+      <button class="filter-button" data-filter="e">Eastern</button>
+      <button class="filter-button" data-filter="photography">Broad edge</button>
+      <br><br>
+      <button class="filter-button" data-filter="photography">Arabic</button>
+      <button class="filter-button" data-filter="f">Faux</button>
+      <button class="filter-button" data-filter="photography">Pointed Pen</button>
+      <button class="filter-button" data-filter="b">Brush Pen</button>
+      
+    </div>
+    <div class="gallery-container">
+      <div class="gallery-item design">
+        <img src="images/b.jpg" alt="Image 1">
+      </div>
+      <div class="gallery-item development">
+        <img src="samir-bouaked-MFvflDBZdyM-unsplash.jpg" alt="Image 2">
+      </div>
+      <div class="gallery-item photography">
+        <img src="pexels-katya-wolf-8716154.jpg" alt="Image 3">
+      </div>
+      <div class="gallery-item e">
+        <img src="marco-zuppone-zHwWnUDMizo-unsplash.jpg" alt="Image 4">
+      </div>
+      <div class="gallery-item b">
+        <img src="pexels-feng-zou-5788529.jpg" alt="Image 5">
+      </div>
+      <div class="gallery-item f">
+        <img src="pexels-cottonbro-studio-3826682.jpg" alt="Image 6">
+      </div>
+      <div class="gallery-item design">
+        <img src="rachel-mcdermott-fZ2DnCBiLE8-unsplash.jpg" alt="Image 7">
+      </div>
+      <div class="gallery-item design">
+        <img src="jean-beller--bSVqdBuyzQ-unsplash.jpg" alt="Image 8">
+      </div>
+      
+    </div>
+  </div>
+
+ 
+    
+      <style>
+
+.portfolio-gallery {
+  max-width: 800px;
+  margin: 0 auto;
+  
+}
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.filter-button:hover{
+  background-color:#efdddd7e ;
+}
+.filter-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-item img:hover {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  filter: grayscale(100%);
+
+}
+</style>
+<script>
+  const filterButtons = document.querySelectorAll('.filter-button');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filterButtons.forEach(button => {
+button.addEventListener('click', () => {
+const filter = button.dataset.filter;
+filterButtons.forEach(btn => btn.classList.remove('active'));
+button.classList.add('active');
+galleryItems.forEach(item => {
+if (item.classList.contains(filter) || filter === 'all') {
+  item.style.display = 'block';
+} else {
+  item.style.display = 'none';
+}
+});
+});
+});
+
+</script>
+
+<footer class="bg-dark text-center text-lg-start text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row mt-4">
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">See other books</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>Bestsellers</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white"><i class="fas fa-book fa-fw fa-sm me-2"></i>All books</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white"><i class="fas fa-user-edit fa-fw fa-sm me-2"></i>Our authors</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Execution of the contract</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Supply</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white"><i class="fas fa-backspace fa-fw fa-sm me-2"></i>Returns</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Regulations</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>Privacy policy</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Publishing house</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="text-white">The BookStore</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white">123 Street</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white">05765 NY</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white"><i class="fas fa-briefcase fa-fw fa-sm me-2"></i>Send us a book</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Write to us</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="text-white"><i class="fas fa-at fa-fw fa-sm me-2"></i>Help in purchasing</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white"><i class="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Check the order status</a>
+          </li>
+          <li>
+            <a href="#!" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>Join the newsletter</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2021 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+  </body>
+
+</html>
